@@ -1,0 +1,8 @@
+.outline{
+    height: 100px;
+    width: 100px;
+    border: 20px solid black;
+}
+.blue{
+    background-color: blue;
+}

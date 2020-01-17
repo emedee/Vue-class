@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <div id="app">
+        <h1>{{ Heading }}</h1>
+        <p>First Name: {{ firstName }}</p>
+        <p>Second Name: {{ secondName }}</p>
+        <p>Age: {{ age }}</p>
+        Updated Age:<input type="text" v-on:input='changeTitle'>
+    </div> -->
+
+
+    <!-- <div id="app">
+        <p v-once>{{ title }}</p>
+        <p>{{ sayHello() }}</p>
+        <a v-bind:href='link'>Google</a>
+        <p v-html= 'finishedLink'></p>
+        <p v-html= 'Heading'></p>
+    </div> -->
+
+
+    <!-- Event listeners with Vue -->
+    <!-- <div id="app">
+        <button v-on:click='counter++' v-bind:title='message'>Click me</button>
+        <p>{{ counter }}</p>
+        <button v-on:click='counter2--'>Click me</button>
+        <p>{{ counter2 }}</p>
+        <p v-on:mousemove='update'>
+            coordinates: {{x}} / {{y}} <span v-on:mousemove.stop>- Dead Spot</span>
+
+        </p>
+        <p v-if='seen'>now you see me</p>
+    </div> -->
+
+    <!-- <div id="app">
+        <input type="text" name="" id="" v:bind="message">
+        {{ message }}
+    </div> -->
+
+    <div id="app">
+        <!-- <div :class="{blue: color,  outline: line}">
+
+        </div>
+        <button @click='changeColor'>Change Color</button> -->
+        <div class="container mt-5 TA-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table border">
+                        <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">#</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="(person,i) in persons">
+                            <th scope="row">{{parseInt(i) + 1}}</th>
+                            <td>{{person.name}}</td>
+                            <td>{{person.role}}</td>
+                            <td>
+                                <button class="btn btn-danger"  @click="removeItem(i)" >Delete</button>
+                                <button @click='updateItem(person)' class="btn btn-primary">Edit</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow p-4">
+                        <h2 class="mb-4">Please Add New Users</h2>
+                        <form @submit.prevent="addUser">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input v-model="user.name" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Role</label>
+                                <input v-model="user.role" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary ml-3">Submit</button>
+                                <button type="reset" class="btn btn-danger">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="card shadow p-4">
+                        <h2 class="mb-4">Please Add New Users</h2>
+                        <form id="form">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label>Role</label>
+                                <input type="text" class="form-control" id="role">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary ml-3">Submit</button>
+                                <button type="button" class="btn btn-danger" id="reset">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./Main.js"></script>
+    <!-- <script src="./app.js"></script> -->
+</body>
+</html>
