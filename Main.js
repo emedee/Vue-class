@@ -98,7 +98,8 @@ new Vue({
             {name:'steve', role:'php dev'},
             {name:'joe', role:'python dev'},
             {name:'martha', role:'vue dev'},
-        ]
+        ],
+        status: true
     },
     methods: {
         changeColor() {
@@ -108,10 +109,14 @@ new Vue({
             this.persons.push(this.user);
         },
         removeItem(i){
-            this.persons.splice(i, 1)
+            this.persons.splice(i, 1);
         },
         updateItem(id){
-            this.user = id
+            this.user = id;
+            this.status = !this.status;
+        },
+        updatePerson(){
+            alert('Field has been updated');
         }
     }
 })
